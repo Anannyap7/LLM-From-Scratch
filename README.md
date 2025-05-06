@@ -21,7 +21,7 @@ I build every core component of large language model (LLM) architectures from sc
 
 Now you're generating the next token: `"the"`
 
-### 🟢 Without KV Caching (Normal Inference)
+### 🟡 Without KV Caching (Normal Inference)
 At token `t₅ = "the"`:
 - Recompute:
   - `k₁, k₂, k₃, k₄, k₅`
@@ -33,7 +33,7 @@ At token `t₅ = "the"`:
 
 ❌ Inefficient — recomputing everything at each step!
 
-### 🟡 With KV Caching (Efficient Inference)
+### 🟢 With KV Caching (Efficient Inference)
 
 At token `t₅ = "the"`:
 - Already stored:
