@@ -11,21 +11,15 @@ I build every core component of large language model (LLM) architectures from sc
 - You build full `Q`, `K`, and `V` matrices **fresh** every time
 - Compute all attention scores, softmax weights, and context vectors `[c₁, c₂, ..., cₜ]` in **parallel** using full sequences (because we know all tokens ahead of time)
 
----
-
 ### ⚡ In *KV caching* (used in **inference/generation**):
 - We **generate one token at a time** (we don’t know the next tokens yet)
 - So we don’t recompute all `K` and `V` at each step — we **cache** (store) the previous ones to avoid redundant computation
-
----
 
 ### 🧱 Step-by-Step Example
 
 **Sentence generation: `"The cat sat on"`**
 
 Now you're generating the next token: `"the"`
-
----
 
 ### 🟢 Without KV Caching (Normal Inference)
 At token `t₅ = "the"`:
@@ -38,8 +32,6 @@ At token `t₅ = "the"`:
   - Softmax → context vector `c₅`
 
 ❌ Inefficient — recomputing everything at each step!
-
----
 
 ### 🟡 With KV Caching (Efficient Inference)
 
