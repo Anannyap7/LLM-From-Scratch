@@ -5,7 +5,7 @@ I build every core component of large language model (LLM) architectures from sc
 
 ## KV Caching
 
-![KV Speed Comparison Diagram](assets/kv_cache_performance_comparison.png)
+![KV Speed Comparison Diagram](Pretraining-with-KV-Caching/kv_cache_performance_comparison.png)
 
 ### 🔁 In *normal attention* (used in **training**):
 - For each token `t₁, t₂, ..., tₜ`, you recompute:
