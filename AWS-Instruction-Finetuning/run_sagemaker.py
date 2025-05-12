@@ -73,3 +73,5 @@ print("Input:")
 print(input_text)
 print("\nModel Output:")
 print(result) 
+
+predictor.delete_endpoint()
