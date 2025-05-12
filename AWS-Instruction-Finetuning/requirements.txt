@@ -1,0 +1,12 @@
+sagemaker
+torch
+torchvision
+torchaudio
+tensorflow
+tiktoken
+numpy
+matplotlib
+pandas
+requests
+tqdm 
+ipykernel
